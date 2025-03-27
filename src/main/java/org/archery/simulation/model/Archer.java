@@ -1,10 +1,10 @@
 package org.archery.simulation.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.Map;
 import java.util.Random;
+
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Represents an archer in an archery simulation.
@@ -15,7 +15,8 @@ import java.util.Random;
 @Setter
 public class Archer {
 
-	private static PseudoRandomGenerator random; // Random number generator for various calculations
+	private static PseudoRandomGenerator rng; // Random number generator for various calculations
+	private static Random random; // Random number generator for various calculations
 	private int archerId; // Unique identifier for the archer
 	private int initialStamina; // Initial stamina level of the archer
 	private int experience; // Experience points accumulated by the archer
@@ -39,9 +40,10 @@ public class Archer {
 	 * @param id Unique identifier for the archer.
 	 */
 	public Archer(int id) {
-		random = new PseudoRandomGenerator();
+		random = new Random();
+		rng = new PseudoRandomGenerator();
 		this.archerId = id; // Assigns the archer's unique ID
-		initialStamina = random.nextInt(45 - 25 + 1) + 25; // Sets initial stamina between 25 and 45
+		initialStamina = rng.nextInt(25, 45); // Sets initial stamina between 25 and 45
 		experience = 10; // Default experience starts at 10
 		initialLuck = generateLuck(); // Generates initial luck value for the archer
 		gender = new Gender(random.nextInt(2)); // Randomly assigns a gender (binary)

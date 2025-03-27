@@ -180,7 +180,7 @@ public class Game {
 		StringBuilder luckyArchers = new StringBuilder(); // StringBuilder to accumulate results
 		for (int i = 0; i < matches.size(); i++) {
 			Archer luckyArcher = matches.get(i).obtainMostLuckArcher(); // Get the lucky archer from the match
-			luckyArchers.append(String.format("Match %d : Arquero %d Total executeLaunch ganado : %d%n",
+			luckyArchers.append(String.format("Match %d : Arquero %d Total ejecutar Lanzamiento ganado : %d%n",
 					i + 1, luckyArcher.getArcherId(), luckyArcher.getTotalLuck())); // Append lucky archer info
 		}
 		return luckyArchers.toString(); // Return the lucky archers info

@@ -32,7 +32,7 @@ public class MainView extends JFrame {
 
 	private JPanel contentPane; // Main panel for the GUI components
 	private final Font CUSTOM_FONT = new Font("Georgia", Font.BOLD, 14); // Custom font for labels
-	private final Color BACKGROUND_COLOR = new Color(40, 40, 40); // Dark background color
+	private final Color BACKGROUND_COLOR = new Color(60, 63, 65); // Dark background color
 	private final Color TEXT_COLOR = Color.WHITE; // Text color for labels and text areas
 
 	/**
@@ -48,8 +48,9 @@ public class MainView extends JFrame {
 	public MainView(String luckiestArchersStats, String mostExperienceArcherStats,
 					String scoreWinningTeamStats, String winningGenderStats,
 					String genderGameWinnerStats, List<Archer> archers) {
-		super("Simulación de tiro con arco"); // Set the title of the window
-		setSize(600, 800); // Set the size of the window
+		super("Simulación de tiro con arco"); // Set the title of the windowxv
+
+		setExtendedState(MAXIMIZED_BOTH);// Set the size of the window
 		setDefaultCloseOperation(EXIT_ON_CLOSE); // Close the application on window close
 		setLocationRelativeTo(null); // Center the window on the screen
 		setResizable(true); // Allow window resizing
