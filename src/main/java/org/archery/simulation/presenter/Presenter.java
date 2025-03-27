@@ -30,7 +30,8 @@ public class Presenter {
 				simulation.getWinningTeam(),         // The winning team.
 				simulation.getGendersByMatch(),       // Winning gender in each game.
 				simulation.getGenderWinStatistics(), // Statistics of wins by gender.
-				simulation.getAllArchers()           // List of all archers.
+				simulation.getAllArchers(),           // List of all archers.
+				simulation.getPoints()
 		);
 	}
 }

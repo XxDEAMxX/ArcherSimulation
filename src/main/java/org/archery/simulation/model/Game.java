@@ -147,8 +147,13 @@ public class Game {
 	public String getWinningTeam() {
 		calculateTeamScores(); // Calculate total scores for teams
 		Team winningTeam = totalTeam1Score > totalTeam2Score ? team1 : team2; // Determine the winning team
+		return String.format("Equipo %d", winningTeam.getTeamId()); // Format and return the winning team info
+	}
+
+	public String getPoints() {
+		calculateTeamScores(); // Calculate total scores for teams
 		int winningPoints = Math.max(totalTeam1Score, totalTeam2Score); // Get the winning points
-		return String.format("Equipo %d con %s puntuación", winningTeam.getTeamId(), formatPoints(winningPoints)); // Format and return the winning team info
+		return String.format(formatPoints(winningPoints)); // Format and return the winning team info
 	}
 
 	/**
