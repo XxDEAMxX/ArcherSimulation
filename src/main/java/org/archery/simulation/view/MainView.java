@@ -32,7 +32,7 @@ public class MainView extends JFrame {
 
 	private JPanel contentPane; // Main panel for the GUI components
 	private final Font CUSTOM_FONT = new Font("Georgia", Font.BOLD, 14); // Custom font for labels
-	private final Color BACKGROUND_COLOR = new Color(60, 63, 65); // Dark background color
+	private final Color BACKGROUND_COLOR = new Color(0, 68, 106); // Dark background color
 	private final Color TEXT_COLOR = Color.WHITE; // Text color for labels and text areas
 
 	/**
